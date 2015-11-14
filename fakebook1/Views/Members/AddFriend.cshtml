@@ -1,0 +1,56 @@
+﻿@model IEnumerable<fakebook1.Models.Member>
+
+@{
+    ViewBag.Title = "Member Directory";
+}
+
+<h2>AddFriend</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Profile.bioText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.displayName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.datedJoined)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lastLogin)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profile.bioText)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.displayName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.datedJoined)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lastLogin)
+            </td>
+            <td>
+                <div class="form-actions no-color btn btn-default">
+                    @Html.ActionLink("Add Friend", "AddFriend", new { id = item.ID })
+                </div>
+            </td>
+        </tr>
+    }
+
+</table>

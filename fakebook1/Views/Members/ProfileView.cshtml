@@ -1,0 +1,38 @@
+﻿@model fakebook1.Models.Member
+
+@{
+    ViewBag.Title = "Profile";
+}
+    <br />
+    <div class="form-actions no-color btn btn-default">
+    @Html.ActionLink("Edit Demographics", "EditDemographics", new { id = Model.ID })
+    </div>
+    <br />
+    <div class="form-actions no-color btn btn-default">
+    @Html.ActionLink("Add Friends", "AddFriend")
+    </div>
+
+    <h1 class="text-center">@Html.DisplayNameFor(model => model.displayName)</h1>
+    <h2 class="text-center">Joined on @Html.DisplayNameFor(model => model.datedJoined)</h2>
+
+    <hr />
+
+    <div class="row">
+
+    <div class="col-md-4">
+        <h2 class="text-center">Personal Information</h2>
+        <p class="text-center">Birthday: @Html.DisplayNameFor(model => model.Profile.demographics.Birthdate)</p>
+        <p class="text-center">Gender: @Html.DisplayNameFor(model => model.Profile.demographics.Gender)</p>
+    </div>
+    
+    <div class="col-md-4">
+        <h2 class="text-center">Location</h2>
+        <p class="text-center">Country: @Html.DisplayNameFor(model => model.Profile.demographics.Country)</p>
+        <p class="text-center">State: @Html.DisplayNameFor(model => model.Profile.demographics.State)</p>
+        <p class="text-center">City: @Html.DisplayNameFor(model => model.Profile.demographics.City)</p>
+    </div>
+
+
+
+</div>
+    

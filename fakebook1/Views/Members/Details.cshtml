@@ -1,0 +1,58 @@
+﻿@model fakebook1.Models.Member
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile.bioText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profile.bioText)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.displayName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.displayName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.datedJoined)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.datedJoined)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lastLogin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lastLogin)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
